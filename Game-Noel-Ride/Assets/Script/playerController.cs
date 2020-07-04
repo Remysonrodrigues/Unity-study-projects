@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class playerController : MonoBehaviour
 {
     private Rigidbody2D playerRb;
+    private Animator playerAnimator;
     public float velocidadeMovimento;
     
     private int presentes;
@@ -21,6 +22,7 @@ public class playerController : MonoBehaviour
     void Start()
     {
         playerRb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
         StartCoroutine("contagemRegressiva");
     }
 
@@ -45,7 +47,7 @@ public class playerController : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Titulo");
+            StartCoroutine("GameOver");
         }
     }
 
@@ -60,5 +62,17 @@ public class playerController : MonoBehaviour
 
             Destroy(col.gameObject);
         }
+    }
+
+    void OnCollisionEnter2D()
+    {
+        StartCoroutine("GameOver");
+    }
+
+    IEnumerator GameOver()
+    {
+        playerAnimator.SetBool("morte", true);
+        yield return new WaitForSeconds(0.8f);
+        SceneManager.LoadScene("GameOver");
     }
 }

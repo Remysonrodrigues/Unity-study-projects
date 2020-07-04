@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5662205963692373833}
   - component: {fileID: 8652940510886567706}
   - component: {fileID: 5337512524509007976}
+  - component: {fileID: 6228037391795459106}
   m_Layer: 0
   m_Name: gelo (2)
   m_TagString: Untagged
@@ -182,3 +183,24 @@ PolygonCollider2D:
       - {x: 1.095, y: -2.33}
       - {x: 1.375, y: -2.27}
       - {x: 1.475, y: -2.25}
+--- !u!50 &6228037391795459106
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8930844867248109644}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

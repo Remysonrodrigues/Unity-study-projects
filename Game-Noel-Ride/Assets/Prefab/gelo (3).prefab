@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6494027698589847089}
   - component: {fileID: 4884349778853167209}
   - component: {fileID: 8551614839949342657}
+  - component: {fileID: 8855107127919609028}
+  - component: {fileID: 5529784148198864895}
   m_Layer: 0
   m_Name: gelo (3)
   m_TagString: Untagged
@@ -108,3 +110,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.16, y: 1.14}
   m_EdgeRadius: 0
+--- !u!50 &8855107127919609028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846943540448953221}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
+--- !u!114 &5529784148198864895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2846943540448953221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9d10ca9961ad34fb30beab747b3589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidade: -3
