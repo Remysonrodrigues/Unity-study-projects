@@ -56,6 +56,7 @@ public class playerController : MonoBehaviour
         if (col.tag == "presente")
         {
             presentes += 1;
+            tempoFase += 10;
             presenteTxt.text = presentes.ToString();
 
             Instantiate(particula, col.transform.position, col.transform.rotation);
@@ -64,9 +65,12 @@ public class playerController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D()
+    void OnCollisionEnter2D(Collision2D col)
     {
-        StartCoroutine("GameOver");
+        if(col.gameObject.tag != "Player")
+        {
+            StartCoroutine("GameOver");
+        }
     }
 
     IEnumerator GameOver()
